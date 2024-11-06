@@ -9,6 +9,10 @@
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -115,7 +119,7 @@
                         <span class="features__text">
                             Вбудована BMS<br>
                             система, що забезпечує<br>
-                            безпеку батареї
+                            безпеку батареї при використанні
                         </span>
                     </div>
                     <div class="features__item">
@@ -175,7 +179,7 @@
                         </div>
                         <span class="features__title">
                             Аккумулятор:<br>
-                            Літій-фосфат (LFP)<br>
+                            Літій-залізо-фосфат (LFP)<br>
                         </span>
                         <span class="features__text">
                             Безпечний<br>
@@ -652,7 +656,7 @@
             <div class="options__container _container">
                 <img src="./images/options.jpg" alt="" class="options__image">
                 <div class="title options__title">
-                    <span>Від 5 000 до 15 000 Ватт</span> батареї, які<br>
+                    <span>Від 5 кВт\год до 15 кВт\год</span> батареї, які<br>
                     легко приєднуються до інвертора
                 </div>
                 <div class="options__items">
@@ -954,20 +958,20 @@
                           <img src="./images/input-name-icon.svg" alt="Icon">
                         </span>
                         <div class="input-divider"></div>
-                        <input type="text" placeholder="Введіть Ваше ім’я">
+                        <input type="text" class="input-name" placeholder="Введіть Ваше ім’я" required>
                     </div> 
                     <div class="input-wrapper">
                         <span class="input-icon">
                           <img src="./images/input-phone-icon.svg" alt="Icon">
                         </span>
                         <div class="input-divider"></div>
-                        <input type="text" placeholder="Введіть Ваш телефон">
+                        <input type="text" class="input-phone" placeholder="Введіть Ваш телефон" required>
                     </div> 
-
+                    <button class="button order__button" type="submit">
+                        Замовити
+                    </button>
                 </form>
-                <button class="button order__button">
-                    Замовити
-                </button>
+               
                 <div class="order__items">
                     <div class="order__item">
                         <img src="./images/order/order-1.svg" alt="" class="order__icon">
@@ -1016,28 +1020,69 @@
                           <img src="./images/input-name-icon.svg" alt="Icon">
                         </span>
                         <div class="input-divider"></div>
-                        <input type="text" placeholder="Введіть Ваше ім’я">
+                        <input type="text" class="input-name" placeholder="Введіть Ваше ім’я" required>
                     </div> 
                     <div class="input-wrapper">
                         <span class="input-icon">
                           <img src="./images/input-phone-icon.svg" alt="Icon">
                         </span>
                         <div class="input-divider"></div>
-                        <input type="text" placeholder="Введіть Ваш телефон">
+                        <input type="text" class="input-phone" placeholder="Введіть Ваш телефон" required>
                     </div> 
-
+                    <button class="button additional__button">
+                        Залишити заявку
+                    </button>
                 </form>
-                <button class="button additional__button">
-                    Залишити заявку
-                </button>
+              
                 <p class="additional__text-end">Після відправки заявки зв’яжемось<br>
                     з вами <span>найближчим часом</span></p>
             </div>
         </div>
+        <div id="modal" class="modal">
+            <div class="modal__content">
+              <span class="modal__close">&times;</span>
+                <h2 class="heading modal__heading">
+                    <span>заповніть дані</span>
+                </h2>
+                <form action="" class="form modal__form">
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                          <img src="./images/input-name-icon.svg" alt="Icon">
+                        </span>
+                        <div class="input-divider"></div>
+                        <input class='input-name' type="text" placeholder="Введіть Ваше ім’я" required>
+                    </div> 
+                    <div class="input-wrapper">
+                        <span class="input-icon">
+                          <img src="./images/input-phone-icon.svg" alt="Icon">
+                        </span>
+                        <div class="input-divider"></div>
+                        <input type="text"  class='input-phone'  placeholder="Введіть Ваш телефон" required>
+                    </div> 
+                    <button class="button modal__send-button" type="submit">
+                        Надіслати
+                    </button>
+                </form>
+               
+                
+            </div>
+            <div class="success__content">
+                <span class="modal__close">&times;</span>
+                <h2 class="heading modal__heading">
+                    <span>Дякуємо!</span>
+                </h2>
+                <p class="success__text">
+                    Ми з Вами зв’яжемось найближчим часом
+                </p>
+                <button class="button modal__success-button">
+                    Назад на сайт
+                </button>
+            </div>
+          </div>
     </div>
 
 
-  
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./index.js"></script>
 </body>
